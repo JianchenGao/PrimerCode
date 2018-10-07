@@ -48,6 +48,7 @@
     <ClCompile Include="DebugDelete.cpp" />
     <ClCompile Include="Folder.cpp" />
     <ClCompile Include="HasPtr.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Message.cpp" />
     <ClCompile Include="Query.cpp" />
     <ClCompile Include="Quote.cpp" />
