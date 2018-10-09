@@ -33,7 +33,7 @@ int compare(const char(&p1)[N], const char(&p2)[M]);
 template <>
 int compare(const char* const &p1, const char* const &p2);
 
-int main()
+int chapter16_main()
 {
 	//ÊµÀý»¯Blob<int>
 	Blob<int> squares = { 0,1,2,3,4,5,6,7,8,9 };

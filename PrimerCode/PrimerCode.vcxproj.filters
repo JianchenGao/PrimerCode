@@ -134,5 +134,8 @@
     <ClCompile Include="DebugDelete.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="chapter17_main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

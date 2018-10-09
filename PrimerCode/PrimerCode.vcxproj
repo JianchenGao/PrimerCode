@@ -45,6 +45,7 @@
     <ClCompile Include="chapter13_main.cpp" />
     <ClCompile Include="chapter14_main.cpp" />
     <ClCompile Include="chapter16_main.cpp" />
+    <ClCompile Include="chapter17_main.cpp" />
     <ClCompile Include="DebugDelete.cpp" />
     <ClCompile Include="Folder.cpp" />
     <ClCompile Include="HasPtr.cpp" />
