@@ -22,6 +22,7 @@
     <ClInclude Include="Basket.h" />
     <ClInclude Include="Blob.h" />
     <ClInclude Include="DebugDelete.h" />
+    <ClInclude Include="ExceptionForSalesdata.h" />
     <ClInclude Include="Folder.h" />
     <ClInclude Include="HasPtr.h" />
     <ClInclude Include="Message.h" />
@@ -46,6 +47,7 @@
     <ClCompile Include="chapter14_main.cpp" />
     <ClCompile Include="chapter16_main.cpp" />
     <ClCompile Include="chapter17_main.cpp" />
+    <ClCompile Include="chapter18_main.cpp" />
     <ClCompile Include="DebugDelete.cpp" />
     <ClCompile Include="Folder.cpp" />
     <ClCompile Include="HasPtr.cpp" />

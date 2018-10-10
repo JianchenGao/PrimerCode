@@ -72,6 +72,9 @@
     <ClInclude Include="DebugDelete.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ExceptionForSalesdata.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chapter12_main.cpp">
@@ -135,6 +138,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="chapter17_main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter18_main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,4 +1,5 @@
 #include "Sales_data.h"
+#include "ExceptionForSalesdata.h"
 #include <ostream>
 #include<istream>
 using namespace std;
@@ -75,6 +76,10 @@ Sales_data operator+(const Sales_data &lhs, const Sales_data &rhs)
 
 Sales_data& Sales_data::operator+=(const Sales_data &rhs)
 {
+	//“Ï≥£¥¶¿Ì≤‚ ‘
+	if (isbn() != rhs.isbn())
+		throw isbn_mismatch("wrong isbns", isbn(), rhs.isbn());
+
 	units_sold += rhs.units_sold;
 	revenue += rhs.revenue;
 	return *this;

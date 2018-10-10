@@ -15,6 +15,7 @@ class Sales_data {
 	friend std::istream &operator>>(std::istream &is, Sales_data &item);
 	friend bool operator==(const Sales_data &lhs, const Sales_data &rhs);
 	friend bool operator!=(const Sales_data &lhs, const Sales_data &rhs);
+	friend Sales_data operator+(const Sales_data &lhs, const Sales_data &rhs);//不能写在类内，类内会将第一参数默认成this
 
 		
 public:

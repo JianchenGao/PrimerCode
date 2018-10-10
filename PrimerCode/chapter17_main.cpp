@@ -5,7 +5,7 @@
 using namespace std;
 
 int rw_file_test();
-int main()
+int chapter_17_main()
 {
 
 	cout << "default bool values: " << true << " " << false 
@@ -18,6 +18,7 @@ int main()
 
 	rw_file_test();
 	cout << "hello word!" << endl;
+	return 0;
 }
 
 int rw_file_test()
