@@ -3,11 +3,25 @@
 #define SCREEN_H
 
 #include<string>
+#include<iostream>
+
 
 class Screen {
 public:
 
 	friend class Window_mgr;
+
+	//Action是一个指针，可以用任意一个光标移动函数对其赋值
+	using Action = Screen & (Screen::*)();
+	//指定具体要移动的方向
+	enum Directions {HOME,FORWARD,BACK,UP,DOWN};
+	Screen& move(Directions);
+
+	Screen& home() { std::cout << "home" << std::endl; return *this; }
+	Screen& forward() { std::cout << "forward" << std::endl; return *this;}
+	Screen& back() { std::cout << "back" << std::endl; return *this;}
+	Screen& up() { std::cout << "up" << std::endl; return *this;}
+	Screen& down() { std::cout << "down" << std::endl; return *this;}
 
 
 	typedef std::string::size_type pos;
@@ -42,12 +56,13 @@ private:
 	void do_display(std::ostream &os) const { os << contents; }
 	// other members as before
 
-private:
 	pos cursor = 0;
 	pos height = 0, width = 0;
 	std::string contents;
 
 	mutable size_t access_ctr;
+
+	static Action Menu[];
 };
 
 inline                   // we can specify inline on the definition

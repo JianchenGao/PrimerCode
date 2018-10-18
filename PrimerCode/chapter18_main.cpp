@@ -9,7 +9,7 @@ void print()
 	cout << "print???main" << endl;
 }
 
-int main()
+int chapter18_main()
 {
 	//using cplusplus_primer::Sales_data;
 	//using cplusplus_primer::operator+;

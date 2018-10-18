@@ -30,6 +30,7 @@
     <ClInclude Include="Query.h" />
     <ClInclude Include="QueryResult.h" />
     <ClInclude Include="Quote.h" />
+    <ClInclude Include="RTTI_test.h" />
     <ClInclude Include="Sales_data.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="StrBlob.h" />
@@ -48,12 +49,14 @@
     <ClCompile Include="chapter16_main.cpp" />
     <ClCompile Include="chapter17_main.cpp" />
     <ClCompile Include="chapter18_main.cpp" />
+    <ClCompile Include="chapter19_main.cpp" />
     <ClCompile Include="DebugDelete.cpp" />
     <ClCompile Include="Folder.cpp" />
     <ClCompile Include="HasPtr.cpp" />
     <ClCompile Include="Message.cpp" />
     <ClCompile Include="Query.cpp" />
     <ClCompile Include="Quote.cpp" />
+    <ClCompile Include="RTTI_test.cpp" />
     <ClCompile Include="Sales_data.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="Screen_mian.cpp" />

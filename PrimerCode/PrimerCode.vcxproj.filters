@@ -75,6 +75,9 @@
     <ClInclude Include="ExceptionForSalesdata.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="RTTI_test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chapter12_main.cpp">
@@ -141,6 +144,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="chapter18_main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chapter19_main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RTTI_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
