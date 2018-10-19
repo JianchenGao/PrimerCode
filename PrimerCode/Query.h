@@ -17,7 +17,7 @@ protected:
 	virtual ~Query_base() = default;
 private:
 	//eval 返回与当前Query匹配的QueryResult
-	virtual QueryResult eval(const TextQuery&) const = 0;
+	virtual TextQuery::QueryResult eval(const TextQuery&) const = 0;
 	//rep是表示查询的一个string
 	virtual std::string rep() const = 0;
 };
@@ -31,7 +31,7 @@ class Query {
 public:
 	Query(const std::string&);	//构建一个新的WordQuery
 	//接口函数：调用对应的Query_base操作
-	QueryResult eval(const TextQuery &t) const
+	TextQuery::QueryResult eval(const TextQuery &t) const
 	{
 		return q->eval(t);
 	}
@@ -47,7 +47,7 @@ class WordQuery :public Query_base {
 	friend class Query;		//Query使用WordQuery构造函数
 	WordQuery(const std::string &s):query_word(s){ }
 	//具体的类：WordQuery将定义所有继承而来的纯虚函数
-	QueryResult eval(const TextQuery &t) const
+	TextQuery::QueryResult eval(const TextQuery &t) const
 	{
 		return t.query(query_word);
 	}
@@ -63,7 +63,7 @@ class NotQuery :public Query_base {
 	NotQuery(const Query &q):query(q) { }
 	//具体的类：NotQuery将定义所有继承而来的纯虚函数
 	std::string rep() const { return "~(" + query.rep() + ")"; }
-	QueryResult eval(const TextQuery &) const;
+	TextQuery::QueryResult eval(const TextQuery &) const;
 	Query query;
 };
 
@@ -87,7 +87,7 @@ class AndQuery :public BinaryQuery {
 	AndQuery(const Query &left,const Query &right):
 		BinaryQuery(left,right,"&"){ }
 	//具体的类：AndQuery继承了rep并且定义了其他纯虚函数
-	QueryResult eval(const TextQuery&) const;
+	TextQuery::QueryResult eval(const TextQuery&) const;
 };
 
 inline Query operator&(const Query &lhs, const Query &rhs)
@@ -99,7 +99,7 @@ class OrQuery :public BinaryQuery {
 	friend Query operator|(const Query&, const Query&);
 	OrQuery(const Query &left,const Query &right):
 		BinaryQuery(left,right,"|"){ }
-	QueryResult eval(const TextQuery&) const;
+	TextQuery::QueryResult eval(const TextQuery&) const;
 };
 
 inline Query operator|(const Query &lhs, const Query &rhs)

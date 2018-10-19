@@ -8,7 +8,7 @@
 using namespace std;
 
 
-QueryResult
+TextQuery::QueryResult
 OrQuery::eval(const TextQuery& text) const
 {
 	//通过Query成员lhs和rhs进行的虚调用
@@ -20,10 +20,10 @@ OrQuery::eval(const TextQuery& text) const
 	//插入右侧运算对象所得的行号
 	ret_lines->insert(right.begin(), right.end());
 	//返回一个新的QueryResult，它表示lhs和rhs的并集
-	return QueryResult(rep(), ret_lines, left.get_file());
+	return TextQuery::QueryResult(rep(), ret_lines, left.get_file());
 }
 
-QueryResult
+TextQuery::QueryResult
 AndQuery::eval(const TextQuery& text) const
 {
 	//通过Query运算对象进行的虚调用，以获得运算对象的查询结果set
@@ -35,10 +35,10 @@ AndQuery::eval(const TextQuery& text) const
 	set_intersection(left.begin(), left.end(),
 		right.begin(), right.end(),
 		inserter(*ret_lines, ret_lines->begin()));
-	return QueryResult(rep(), ret_lines, left.get_file());
+	return TextQuery::QueryResult(rep(), ret_lines, left.get_file());
 }
 
-QueryResult
+TextQuery::QueryResult
 NotQuery::eval(const TextQuery& text) const
 {
 	//通过Query运算对象对eval进行虚调用
@@ -57,6 +57,6 @@ NotQuery::eval(const TextQuery& text) const
 		else if (beg != end)
 			++beg;	//否则继续获取result的下一行（如果有的话）
 	}
-	return QueryResult(rep(), ret_lines, result.get_file());
+	return TextQuery::QueryResult(rep(), ret_lines, result.get_file());
 }
 

@@ -27,7 +27,7 @@ TextQuery::TextQuery(ifstream &is) :file(new vector<string>)
 	}
 }
 
-QueryResult
+TextQuery::QueryResult
 TextQuery::query(const string &sought) const
 {
 	//如果为找到sought，我们将返回一个指向此set的指针

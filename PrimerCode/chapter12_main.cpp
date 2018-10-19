@@ -52,7 +52,7 @@ string make_plural(size_t ctr, const string &word,
 	return (ctr > 1) ? word + ending : word;
 }
 
-ostream &print(ostream &os, const QueryResult &qr)
+ostream &print(ostream &os, const TextQuery::QueryResult &qr)
 {
 	//如果找到单词，打印出现的次数和所有出现的位置
 	os << qr.sought << " occurs " << qr.lines->size() << " "

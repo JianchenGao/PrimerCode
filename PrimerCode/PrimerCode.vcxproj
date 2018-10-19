@@ -38,6 +38,7 @@
     <ClInclude Include="StrVec.h" />
     <ClInclude Include="TextQuery.h" />
     <ClInclude Include="TextQuery_EX.h" />
+    <ClInclude Include="Token.h" />
     <ClInclude Include="Version_test.h" />
     <ClInclude Include="Window_mgr.h" />
   </ItemGroup>
@@ -55,6 +56,7 @@
     <ClCompile Include="HasPtr.cpp" />
     <ClCompile Include="Message.cpp" />
     <ClCompile Include="Query.cpp" />
+    <ClCompile Include="QueryResult.cpp" />
     <ClCompile Include="Quote.cpp" />
     <ClCompile Include="RTTI_test.cpp" />
     <ClCompile Include="Sales_data.cpp" />
@@ -65,6 +67,7 @@
     <ClCompile Include="StrVec.cpp" />
     <ClCompile Include="TextQuery.cpp" />
     <ClCompile Include="TextQuery_EX.cpp" />
+    <ClCompile Include="Token.cpp" />
     <ClCompile Include="Window_mgr.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

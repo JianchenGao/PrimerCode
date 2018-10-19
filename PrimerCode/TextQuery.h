@@ -9,9 +9,10 @@
 #include<set>
 //using line_no = std::vector<std::string>::size_type;//因为在其他头文件中也要使用，所以不能像书中所写的放到类里面
 
-class QueryResult;//为了定义函数query的返回类型，这个定义是必须的
+//class QueryResult;//为了定义函数query的返回类型，这个定义是必须的
 class TextQuery {
 public:
+	class QueryResult;	//嵌套类稍后定义
 	using line_no = std::vector<std::string>::size_type;
 	TextQuery(std::ifstream&);
 	QueryResult query(const std::string&) const;
