@@ -11,7 +11,10 @@ public:
 	Token(const Token &t) :tok(t.tok) { copyUnion(t); }
 	Token &operator=(const Token&);
 	//如果union含有一个string成员，则我们必须销毁它
-	~Token() { if (tok == STR) sval.~string(); }
+	~Token() {
+		if (tok == STR) 
+			sval.~basic_string();  //c++中string不能直接调用其析构函数
+	}
 
 	//下面的赋值运算符赋值设置union的不同成员
 	Token &operator=(const std::string&);
